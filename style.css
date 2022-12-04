@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+body {
+  background-color: var(--Very-Light-Gray);
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url(images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  --font-color: var(--Very-Dark-Desaturated-Blue);
+  --div-bg: var(--Very-Light-Gray);
+  --btn-color: var(--Dark-Grayish-Blue);
+  --box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --hover-over:var(--Very-Dark-Blue)
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body.dark {
+  background-color: var(--Very-Dark-Blue);
+  background-image: url(images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  --font-color: var(--Light-Grayish-Blue);
+  --div-bg: var(--Very-Dark-Desaturated-Blue);
+  --btn-color: var(--Dark-Grayish-Blue);
+   --box-shadow:rgba(50, 50, 50, 0.2) 0px 7px 29px 0px;
+   --hover-over:var(--Very-Light-Gray)
+}
+
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.wrapper {
+  width: 600px;
+  padding: 10px;
+}
+.wrapper .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.wrapper .header h1 {
+  color: var(--Light-Grayish-Blue);
+  letter-spacing: 10px;
+}
+.wrapper .header .dark-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper .add-todo-wrapper {
+  width: 100%;
+  position: relative;
+  background-color: var(--div-bg);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .add-todo-wrapper input {
+  width: 100%;
+  padding: 25px;
+  margin-left: 45px;
+  border-radius: 5px;
+  border: none;
+  color: var(--font-color);
+  background-color: var(--div-bg);
+}
+.wrapper .add-todo-wrapper input:focus{
+  border: none;
+  outline: none;
+}
+
+.wrapper .add-todo-wrapper span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--Dark-Grayish-Blue);
+  left: 20px;
+}
+.todo-list {
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 5px;
+  background-color: var(--div-bg);
+  box-shadow: var(--box-shadow)
+}
+.todo-list .list-footer {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-footer span {
+  color: var(--btn-color);
+  font-size: 13px;
+}
+.list-footer .btn-group {
+  list-style: none;
+}
+.list-footer .btn-group li {
+  display: inline-block;
+}
+.btn {
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  color: var(--btn-color);
+  font-size: 13px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: var(--hover-over);
+  font-weight: 500;
+}
+.btn:focus {
+  color: var(--Bright-Blue);
+}
+.list-items {
+  list-style: none;
+}
+.list-items li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--Dark-Grayish-Blue);
+  padding-right: 30px;
+  color: var(--font-color);
+}
+.list-items li:hover{
+  cursor: pointer;
+}
+.list-items li:hover > .delete-btn{
+  display: inline-block;
+}
+.list-items li .right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-items li .right .round {
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: -7px;
+  
+}
+.list-items li .right .round label {
+  
+  border: 1px solid var(--Dark-Grayish-Blue);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 25px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 25px;
+}
+.list-items li .right .round label:hover{
+ border: double 1px transparent;
+  background-image: linear-gradient(var(--div-bg), var(--div-bg)), radial-gradient(circle at top left, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+ 
+}
+
+.list-items li .right .round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 6px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.list-items li .right .round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.list-items li .right .round input[type="checkbox"]:checked + label {
+  background:linear-gradient(0.25turn, hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+  
+}
+
+.list-items li .right .round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.hidden,.delete-btn{
+  display: none;
+  
+}
+.delete-btn img{
+  pointer-events: none;
+}
+.status-completed{
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+ .drag-and-drop{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0;
+  color: var(--Dark-Grayish-Blue);
+  font-weight: 500;
+  font-size: 14px;
+}
+.over{
+   background-color: #eaeaea;
+}
+
+@media (max-width: 600px){
+main .container{
+  margin: 60px 20px;
+}
+.delete-btn{
+  display: inline-block;
+}
+.list-footer{
+  position: relative;
+}
+.list-footer .btn-group {
+  width: 100%;
+  position: absolute;
+  background-color: red;
+  top: 70px;
+  left: 0;
+  border-radius: 5px;
+  background-color: var(--div-bg);
+  box-shadow: var(--box-shadow);
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-footer .btn-group li{
+  margin-right: 20px;
+}
+.drag-and-drop{
+  position: relative;
+  margin-top: 120px;
+}
+}

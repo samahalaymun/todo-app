@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+      integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js" async></script>
+    <script src="theme.js" async></script>
+    <title>TODO LIST</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="wrapper">
+          <div class="header">
+            <h1>TODO</h1>
+            <button class="dark-btn"><img src="images/icon-moon.svg" /></button>
+          </div>
+          <div class="add-todo-wrapper">
+            <span class="round"></span>
+            <input class="add" placeholder="Create a new todo..." />
+          </div>
+          <div class="todo-list hidden">
+            <ul class="list-items">
+              <!-- <li>
+                <div class="right">
+                  <div class="round">
+                    <input type="checkbox"  id="checkbox" />
+                    <label for="checkbox"></label>
+                  </div>
+                  <span class="item-content">Complete online javascript course</span>
+                </div>
+                <button class="btn"><img src="images/icon-cross.svg" /></button>
+              </li>  -->
+            </ul>
+            <div class="list-footer">
+              <span><span class="items">5</span> items left</span>
+              <ul class="btn-group">
+                <li><button class="btn all">All</button></li>
+                <li><button class="btn active">Active</button></li>
+                <li><button class="btn completed">Completed</button></li>
+              </ul>
+              <button class="btn clear">Clear Completed</button>
+            </div>
+          </div>
+
+          <div class="drag-and-drop">Drag and drop to reorder list</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
